@@ -1,10 +1,13 @@
 
 $(document).ready(function (){
-    
+    $.ajax({
+		url: "http://gateway.marvel.com/v1/public/characters",
+		dataType: "json",
+		key: "f1548c72506aff620a1e9233add3e0c8",	
+		type: "GET"
+	});
 
-    $.getJSON("http://gateway.marvel.com/v1/public/characters?apikey=388d23d2004fda1f6a8466cbefdfb00105f6767b", function(data) {
-		console.log(data);
-    });
+	console.log();
 
 });
 
