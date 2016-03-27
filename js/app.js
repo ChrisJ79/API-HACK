@@ -1,8 +1,10 @@
 
 $(document).ready(function (){
     
-    $.getJSON("http://gateway.marvel.com:80/v1/public/characters?comics=IRON%20MAN&apikey=json", {
 
+    $.getJSON("http://gateway.marvel.com/v1/public/characters?apikey=f1548c72506aff620a1e9233add3e0c8", function(data) {
+		console.log(data);
     });
 
 });
+
