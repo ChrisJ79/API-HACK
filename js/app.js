@@ -1,28 +1,50 @@
 
+$(document).ready(function () {
+    // This function is to get the data from youtube API and display it on the page
+    function getResults(query) {
+        $.getJSON("http://api.giphy.com/v1/gifs/search", {
+        	"api_key": "dc6zaTOxFJmzC",
+        	"rating": "r",
+        	"q": query
+		},
+            function (data) {
+                console.log(data);
+                // If there are no results it will just empty the list
+                displaySearchResults(data.data);
+            }
 
-$(document).ready(function (){
-    function getResults(query){    
-		$.getJSON("https://api.nasa.gov/planetary/apod?api_key=Y4bXXhWMURLkwiGoOFrqcmel8b1ZFNUKlNngOJ5V", {
-            "date": "2016-03-27",
-            "hd": "false",                
-            "api_key": "Y4bXXhWMURLkwiGoOFrqcmel8b1ZFNUKlNngOJ5V"
-    	},
-    		function(data) {
-    			console.log(data);
-    				if (data.pageInfo.totalResults == 0) {
-                    	alert("No videos found!");
-                }
-    		}
-        )        
+        );
     }
 
+    function displaySearchResults(giphys) {
+        var html = "";
+        $.each(giphys, function (index, giph) {
+            // append li to ul
+            console.log(giph.images.downsized_medium.url);
+            html = html + "<li><p>" + giph.images.rating +
+                "</p><img src='" + giph.images.downsized_medium.url + "'/></li>";
 
+        });
+        $("#wrapper ul").html(html);
+    }
 
+    $("#search-form").submit(function(event){
+        event.preventDefault();
+        getResults($("#query").val());
+
+    });
 
 });
 
 
-/*    $.getJSON("https://api.nasa.gov/planetary/apod?api_key=Y4bXXhWMURLkwiGoOFrqcmel8b1ZFNUKlNngOJ5V", function(data) {
-		console.log(data); ------??????------ */
+/*video.snippet.thumbnails.medium.url*/
 
-    }); 
+
+
+
+
+	
+
+
+
+

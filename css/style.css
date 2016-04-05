@@ -1,7 +1,11 @@
 
 body {
 	background-color: #174869;
-	color: beige;
+	color: red;
 	font-size: 32px;
 	text-align: center;
+}
+
+div {
+	border: 2px solid red;
 }
