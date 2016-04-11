@@ -21,7 +21,7 @@ $(document).ready(function () {
         $.each(giphys, function (index, giph) {
             // append li to ul
             console.log(giph.images.downsized_medium.url);
-            html = html + "<li><p>" + giph.images.rating +
+            html = html + "<li><p>" + giph.images.downsized_medium.url +
                 "</p><img src='" + giph.images.downsized_medium.url + "'/></li>";
 
         });
@@ -37,7 +37,6 @@ $(document).ready(function () {
 });
 
 
-/*video.snippet.thumbnails.medium.url*/
 
 
 
