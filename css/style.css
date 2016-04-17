@@ -1,13 +1,60 @@
 
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+
 body {
-	background-color: #174869;
-	color: red;
-	font-size: 32px;
-	text-align: center;
+	background:-webkit-linear-gradient(280deg, #3b38ec, #72210c);
+	background:-o-linear-gradient(280deg, #3b38ec, #72210c);
+	background:linear-gradient(180deg, #3b38ec, #72210c);
+	background-repeat: no-repeat;
+	background-size: cover;
+}	
+
+#wrapper {
+	overflow: auto;
+	margin: 0;
+	color: yellow;
+	font-size: 48px;
+
 }
 
 div {
-	border: 2px solid red;
+	border: ;
+}
+
+.container-1 {
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	text-align: center;
+	margin: 0 auto;
+	display: inline-block;
+	width: 100%;
+	background-color: orange;
+	height: 170px;
+	top: 0;
+	
+}
+
+.button {
+	border-radius: 50px;
+	box-shadow: 5px 5px 5px #000;
+}
+
+#query {
+	border-radius: 50px;
+  	box-shadow: 5px 5px 5px #000;
+}
+
+.results {
+	position: relative;
+    height: 45rem;
+	overflow: auto;
+	text-align: center;
+	margin-top: 160px;
 }
 
 ul
