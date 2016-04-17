@@ -31,8 +31,13 @@ div {
 	margin: 0 auto;
 	height: 170px;
 	top: 0;
-	
 }
+
+header {
+    font: bold 36px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    text-decoration: underline;
+}
+
 
 .form-wrapper {
     width: 450px;
@@ -60,13 +65,12 @@ div {
 
 
 
-
-
 .button {
 	border-radius: 5px;
 	border: 0;
 	margin-left: 20px;
-	margin-bottom: 5px;
+	width: 76px;
+	height: 40px;
 
 }
 
