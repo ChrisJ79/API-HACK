@@ -21,7 +21,18 @@ body {
 }
 
 div {
-	border: ;
+	border: solid 1px;
+}
+
+
+p {
+	border: solid 1px blue;
+}
+
+.image-box {
+
+	width: 50%
+	min-height: 280px;
 }
 
 .container-1 {
@@ -29,7 +40,7 @@ div {
 	z-index: 9999;
 	text-align: left;
 	margin: 0 auto;
-	height: 170px;
+	height: 165px;
 	top: 0;
 }
 
@@ -92,6 +103,10 @@ ul
     list-style-type: none;
 }
 
+img {
+	margin-left: 75px;
+	margin-right: 75px;
+}
 
 
 
