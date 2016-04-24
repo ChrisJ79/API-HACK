@@ -21,8 +21,7 @@ $(document).ready(function () {
         $.each(giphys, function (index, giph) {
             // append li to ul
             console.log(giph.images.downsized_medium.url);
-            html = html + "<li><p>" + giph.images.downsized_medium.url +
-                "</p><img src='" + giph.images.downsized_medium.url + "'/></li>";
+                html = html + "<li><a href='" + giph.images.downsized_medium.url +"' target='_blank'><img src='" + giph.images.downsized_medium.url + "'/></a></li>";
 
         });
         $("#wrapper ul").html(html);
@@ -41,7 +40,11 @@ $(document).ready(function () {
 
 
 
+/*
+            html = html + "<li><p>" + giph.images.downsized_medium.url +
+                "</p><img src='" + giph.images.downsized_medium.url + "'/></li>";
 
+                */
 	
 
 
