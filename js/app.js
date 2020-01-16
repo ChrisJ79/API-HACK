@@ -19,12 +19,12 @@ $(document).ready(function () {
     function displaySearchResults(giphys) {
         var html = "";
         $.each(giphys, function (index, giph) {
-            // append li to ul
+            // append columns to grid
             console.log(giph.images.downsized_medium.url);
-                html = html + "<li><a href='" + giph.images.downsized_medium.url +"' target='_blank'><img src='" + giph.images.downsized_medium.url + "'/></a></li>";
+            html = html + "<div class='uk-flex uk-flex-center uk-flex-middle uk-margin-bottom'><a href='" + giph.images.downsized_medium.url +"' target='_blank' class='uk-card uk-margin'><img src='" + giph.images.downsized_medium.url + "'/></a></div>";
 
         });
-        $("#wrapper ul").html(html);
+        $("#wrapper .list-wrapper").html(html);
     }
 
     $("#search-form").submit(function(event){
